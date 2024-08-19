@@ -18,10 +18,6 @@ test('Verify the car info page', async ({ page }) => {
 
   await carSearchPage.navigateToCarSearchPage();
 
-  const title = await page.title();
-  console.log(`Page title: ${title}`);
-
   await carSearchPage.performSearch('CITROEN', '3232', '1', '500', '10000');
-
   await carSearchPage.verifyCarInfoPage('CITROEN', 'C3', 'Benzīns', 500, 10000);
 });
